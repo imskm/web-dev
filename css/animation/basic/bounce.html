@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation - keyframes</title>
+<style>
+body {
+	padding: 150px;
+}
+.bounce {
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	background-color: red;
+	animation: bouncing 1s linear alternate forwards;
+}
+
+@keyframes bouncing {
+	0% {
+		transform: translateY(0) scale(1);
+	}
+
+	50% {
+		transform: translateY(250px) scale(.70);
+	}
+
+	70% {
+		transform: translateY(150px) scale(1);
+	}
+
+	100% {
+		transform: translateY(250px) scale(.70);
+	}
+}
+
+</style>
+</head>
+<body>
+
+<div class="bounce"></div>
+
+</body>
+</html>
