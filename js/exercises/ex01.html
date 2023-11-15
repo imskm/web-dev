@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Exercise 1</title>
+</head>
+<body>
+
+<h1>Answer = <span id="answer">##</span></h1>
+<hr>
+
+<button id="add">Add</button>
+<button id="sub">Subtract</button>
+<button id="mul">Multiply</button>
+<button id="div">Divide</button>
+
+<script>
+let answer = document.getElementById("answer");
+
+document.getElementById("add").addEventListener("click", function() {
+	let a = parseInt(prompt("Enter a: "));
+	let b = parseInt(prompt("Enter b: "));
+	answer.innerText = a + b;
+});
+
+document.getElementById("sub").addEventListener("click", function() {
+	let a = parseInt(prompt("Enter a: "));
+	let b = parseInt(prompt("Enter b: "));
+	answer.innerText = a - b;
+});
+
+document.getElementById("mul").addEventListener("click", function() {
+	let a = parseInt(prompt("Enter a: "));
+	let b = parseInt(prompt("Enter b: "));
+	answer.innerText = a * b;
+});
+
+document.getElementById("div").addEventListener("click", function() {
+	let a = parseInt(prompt("Enter a: "));
+	let b = parseInt(prompt("Enter b: "));
+	// @TODO Handle Divide by Zero error
+	answer.innerText = a / b;
+});
+
+</script>
+</body>
+</html>

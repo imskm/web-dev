@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Control Statements</title>
+<style>
+* {
+	font-weight: 400;
+}
+
+.image {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	margin-right: 16px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="content">
+
+
+</div>
+
+<hr>
+
+<button id="add">Add Image</button>
+<button id="change">Change Image</button>
+
+
+<script>
+
+const content = document.getElementById("content");
+const image_url = "https://images.unsplash.com/photo-1653161910616-afc6acb861d9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500";
+
+document.getElementById("add").addEventListener("click", function() {
+	const img = document.createElement('img');
+	img.src = "https://images.unsplash.com/photo-1644982649363-fae51da44eac?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170";
+	img.classList.add("image");
+
+	content.appendChild(img);
+
+
+
+
+});
+
+
+document.getElementById("change").addEventListener("click", function() {
+	const imgs = document.getElementsByTagName('img');
+	console.log(imgs);
+
+	for (let i = 0; i < imgs.length; ++i) {
+		imgs[i].src = image_url;
+	}
+
+});
+
+
+
+
+</script>
+</body>
+</html>

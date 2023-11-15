@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Form</title>
+</head>
+<body>
+
+
+<form action="http://jplive" method="post">
+
+<p>
+<label for="first_name">First Name:</label>
+<input id="first_name" type="text" name="first_name" placeholder="First name">
+</p>
+<p>
+Last Name: <input type="text" name="last_name" placeholder="Last name">
+</p>
+<p>
+Gender:
+<label>
+	<input type="radio" name="gender" value="1"> Male
+</label>
+<label>
+	<input type="radio" name="gender" value="1"> Female
+</label>
+</p>
+
+<p>
+Date of Birth: <input type="date" name="dob">
+</p>
+<p>
+Phone: <input type="text" name="phone" maxlength="10" placeholder="e.g. 9330000000">
+</p>
+<p>
+Address: <textarea rows="5" cols="30" name="address" placeholder="e.g. House No., Street, Town, Dist, Pin, State, Country"></textarea>
+</p>
+<p>
+Select Country:
+<select name="country">
+	<option selected disabled>Select Country</option>
+	<option value="afghanistan">Afghanistan</option>
+	<option value="india">India</option>
+	<option value="pakistan">Pakistan</option>
+	<option value="bhutan">Bhutan</option>
+	<option value="china">China</option>
+	<option value="srilanka">Srilanka</option>
+</select>
+</p>
+<p>
+<label>
+	<input type="checkbox" name="agree"> I agree to our T&amp;C.
+</label>
+</p>
+
+<input type="submit" value="Create account">
+
+</form>
+
+
+</body>
+</html>
+
+
+
+

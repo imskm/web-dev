@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Control Statements</title>
+</head>
+<body>
+
+<h1 id="test">Hello from JavaScript</h1>
+
+<hr>
+
+<button id="run">Click</button>
+
+
+<script>
+
+const button = document.getElementById("run");
+button.addEventListener("click", changeTitle);
+
+function changeTitle() {
+	let h1 = document.getElementById("test");
+	h1.innerText = "<em>Changed</em>";
+	// h1.innerHTML = "<em>Changed</em>";
+}
+
+</script>
+</body>
+</html>

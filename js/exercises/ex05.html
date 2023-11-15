@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Exercise 1</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	background-color: #F0F0F0;
+}
+
+.content {
+	margin: auto;
+	width: 400px;
+	border-radius: 8px;
+	box-shadow: 0px 12px 24px rgba(0, 0, 0, .15);
+}
+
+.content {
+	padding: 12px;
+}
+
+.content-header {
+	margin-bottom: 16px;
+}
+
+.content-footer {
+	margin-top: 16px;
+}
+
+.image {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+button {
+	padding: 8px 32px;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+}
+ul {
+padding: 16px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="content" class="content">
+	<div class="content-header">
+		<h1>Todo App</h1>
+	</div>
+	<div class="content-body">
+		<ul>
+			<!-- li will be added here dynamically -->
+		</ul>
+	</div>
+	<hr>
+	<div class="content-footer">
+		<button id="add">Add</button>
+		<button id="remove">Remove</button>
+	</div>
+</div>
+
+<script>
+const ul = document.querySelector("ul");
+const add = document.querySelector("#add");
+const remove = document.querySelector("#remove");
+
+add.addEventListener("click", function() {
+	let msg = prompt("Enter task: ");
+	let li = document.createElement("li");
+	li.innerText = msg;
+	ul.appendChild(li);
+});
+
+remove.addEventListener("click", function() {
+	if (ul.children.length > 0) {
+		let last = ul.children[ul.children.length - 1];
+		ul.removeChild(last);
+	}
+});
+
+</script>
+</body>
+</html>

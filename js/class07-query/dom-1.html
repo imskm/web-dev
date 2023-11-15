@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Control Statements</title>
+<style>
+* {
+	font-weight: 400;
+}
+
+.text-bold { font-weight: bold; }
+.text-red { color: red; }
+.text-lg { font-size: 60px; }
+.text-underline { text-decoration: underline; }
+
+</style>
+</head>
+<body>
+
+<h1 id="test" class="text-bold text-red text-lg">Hello from JavaScript</h1>
+<h2 class="text-bold text-red text-lg">Hello from JavaScript</h2>
+<h3 class="text-bold text-red text-lg">Hello from JavaScript</h3>
+<h4 class="text-bold text-red text-lg">Hello from JavaScript</h4>
+<h5 class="text-bold text-underline text-red text-lg">Hello from JavaScript</h5>
+
+<hr>
+
+<button id="add">Add Class</button>
+<button id="remove">Remove Class</button>
+
+<script>
+
+let el = document.querySelector("#test");
+console.log(el);
+let a = document.querySelector(".text-bold");
+
+let all = document.querySelectorAll(".text-bold");
+
+let bold_underline = document.querySelectorAll(".text-bold.text-underline");
+
+
+</script>
+</body>
+</html>

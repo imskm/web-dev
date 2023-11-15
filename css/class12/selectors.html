@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<style>
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 100px;
+}
+
+/* @NOTE Why this style also applied on non-direct child? */
+/* Direct child selector */
+li > div {
+	color: red;
+}
+
+/* 2. Child selector " " */
+section .example-child {
+	color: blue;
+}
+
+/* 3. Sibling selector " " */
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: #FF0000;
+}
+.example-sibling + .example-sibling {
+	background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 4. AND selector */
+.example-sibling.box {
+	border: 4px solid #000;
+}
+
+/* 5. ATTRIBUTE selector */
+[type="text"] {
+	border: 1px solid #c0c0c0;
+	height: 44px;
+}
+
+input[type="password"] {
+	color: red;
+	background-color: rgba(0,0,255, .2);
+}
+
+.number[type="number"] {
+	background-color: red;
+}
+
+</style>
+</head>
+<body>
+
+<h1>HEADING 1</h1>
+
+<h1>DIRECT CHILD "&gt;"</h1>
+<ul>
+	<li>
+		List item 1
+		<div>DIV IN LI</div>
+		<p><div>DIN IN P IN LI</div></p>
+	</li>
+	<li>List item 2</li>
+	<li>List item 3</li>
+</ul>
+
+<section>
+	<div>DIV IN SECTOIN</div>
+</section>
+
+<hr>
+
+
+
+
+
+<h1>Child selector "space"</h1>
+<section>
+	<p class="example-child">This is a sample texts</p>
+</section>
+
+<section>
+	<div>
+		<div>
+			<p class="example-child">This is a sample texts</p>
+		</div>
+	</div>
+</section>
+<div>
+	<p class="example-child">This is a sample texts (this will not work)</p>
+</div>
+
+<hr>
+<h1>Sibling selector "+"</h1>
+<section>
+	<div class="example-sibling box">One</div>
+	<div class="example-sibling box">Two</div>
+	<div class="example-sibling box">Three</div>
+	<div class="example-sibling box">
+		<div class="example-sibling">Four</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h1>AND selector</h1>
+<section>
+	<div class="example-sibling box">One</div>
+	<div class="example-sibling">One</div>
+	<div class="box">One</div>
+</section>
+
+
+
+
+
+
+
+
+<hr>
+<h1>ATTRIBUTE selector</h1>
+<input type="text">
+<input type="password">
+<input type="text">
+<input class="number" type="number">
+<input type="number">
+
+
+
+
+
+
+</body>
+</html>

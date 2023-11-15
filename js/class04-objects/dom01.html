@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>JS DOM - 01</title>
+</head>
+<body>
+
+<h1 id="h1">ABC</h1>
+
+
+<script>
+let el = document.getElementById("h1");
+console.log(el);
+
+el.innerHTML = "XYZ";
+el.innerHTML = 'XYZ';
+
+
+
+
+
+el.classList.add('color-red');
+el.classList.add('color-yellow');
+el.classList.remove('color-red');
+
+// Toggle color-yellow class
+/*
+if (el.classList.contains('color-red')) {
+	el.classList.remove('color-red');
+} else {
+	el.classList.add('color-red');
+}
+*/
+el.classList.toggle('color-yellow');
+
+console.log(el.classList.contains('color-yellow'));
+</script>
+</body>
+</html>

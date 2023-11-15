@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Exercise 1</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	background-color: #F0F0F0;
+}
+
+.content {
+	margin: auto;
+	width: 400px;
+	border-radius: 8px;
+	box-shadow: 0px 12px 24px rgba(0, 0, 0, .15);
+}
+
+.content, .content-footer {
+	padding: 12px;
+}
+
+.image {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+button {
+	padding: 8px 32px;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="content" class="content">
+	<div id="content_body" class="content-body">
+		<div id="square" class="square"></div>
+	</div>
+</div>
+
+<hr>
+
+<script>
+const colors = ["red", "green", "blue", "pink", "margenta", "black"];
+
+
+
+
+
+
+document.querySelector("#square").addEventListener("click", function() {
+	const index = parseInt((Math.random() * 10) % colors.length);
+	console.log(index);
+	this.style.backgroundColor = colors[index];
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>JS Events</title>
+</head>
+<body>
+
+<h1>Click Events</h1>
+<button id="event_click">Click</button>
+
+<h1>On Mouse In</h1>
+<button id="event_in">Hover in</button>
+
+<h1>On Mouse Out</h1>
+<button id="event_out">Hover out</button>
+
+<h1>In Input element input event</h1>
+<input type="text" id="event_input" placeholder="First Name">
+<textarea id="event_input_txt"></textarea>
+<p><span id="store">0</span>/100</p>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<script>
+const eventclick = document.querySelector("#event_click");
+const eventin = document.querySelector("#event_in");
+const eventout = document.querySelector("#event_out");
+const eventinput = document.querySelector("#event_input");
+const eventinputtxt = document.querySelector("#event_input_txt");
+
+eventclick.addEventListener("click", function() {
+	alert("You have clicked on me");
+});
+
+eventin.addEventListener("mouseover", function(event) {
+	alert("You just entered mouse over my button");
+});
+
+eventout.addEventListener("mouseout", function(event) {
+	alert("You just left mouse from my button");
+});
+
+eventinput.addEventListener("input", function(event) {
+	console.log(event.target);
+	console.log(event.target.value);
+	let phone = event.target.value;
+	if (phone.length > 10) {
+		alert("Invalid phone number");
+		event.target.value = phone.substr(0, 10);
+	}
+});
+
+eventinputtxt.addEventListener("input", function(event) {
+	// 1. What user has typed
+	const input = event.target.value;
+	// 2. What is the length of the input
+	let len = input.length;
+	if (len > 100) {
+		event.target.value = input.substr(0, 100);
+		return;
+	}
+	// 3. Show the length
+	// 3.1 Get the element where your want to show the length
+	const store = document.querySelector("#store");
+	// 3.2 Set the innerText of the element to length of input
+	store.innerText = len;
+});
+
+</script>
+</body>
+</html>

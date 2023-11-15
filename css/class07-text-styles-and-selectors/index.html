@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>CSS - text - Selectors</title>
+<style>
+
+body {
+	padding: 200px;
+        border: 1px solid red;
+        margin:0;
+}
+
+
+.button {
+	background-color: #DE7800;
+	text-decoration: none;
+	padding: 12px 24px;
+	color: #222222;
+	position: relative;
+}
+
+.button:hover {
+	background-color: #FF0000;
+}
+
+.button:active {
+	background-color: #0000FF;
+	left: 2px;
+	top: 2px;
+}
+
+
+
+
+
+
+
+
+.visited-demo2:link {
+	background-color: #0000FF;
+}
+.visited-demo2:visited {
+	background-color: #FF0000;
+}
+
+.input {
+	background-color: #FFFFFF;
+	border: 1px solid #888888;
+}
+.input:focus {
+	border: 1px solid #FF00FF;
+}
+
+</style>
+</head>
+<body>
+
+<a class="button" href="#">Button</a>
+
+
+
+
+
+
+
+
+
+
+
+<a class="visited-demo2" href="https://yahoo.com" target="_blank">Link</a>
+
+<input type="text" class="input" placeholder="Name">
+<button>Button</button>
+<input type="submit">
+
+
+</body>
+</html>

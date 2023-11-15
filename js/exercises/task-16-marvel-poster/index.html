@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Marvel Poster</title>
+<link rel="stylesheet" href="Marvel.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+	<div class="section">
+		<div class="section-container">
+			<div class="section-wrapper">
+				<div class="Poster">
+					<div class="Poster-buttons">
+						<div class="Poster-buttons-wrapper">
+							<div id="prevPosterButton" class="Poster-button">
+								<span class="icon"><i class="ri-arrow-left-line"></i></span>
+							</div>
+							<div id="nextPosterButton" class="Poster-button">
+								<span class="icon"><i class="ri-arrow-right-line"></i></span>
+							</div>
+						</div>
+					</div>
+					<div class="Poster-images">
+						<div class="Poster-images-wrapper">
+							<div class="Poster-image">
+								<img class="full-opacity" src="1.jpg">
+							</div>
+							<div class="Poster-image">
+								<img src="2.jpg">
+							</div>
+							<div class="Poster-image">
+								<img src="3.jpg">
+							</div>
+							<div class="Poster-image">
+								<img src="4.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+const posters = document.querySelectorAll("img");
+const nextBtn = document.querySelector("#nextPosterButton");
+const prevBtn = document.querySelector("#prevPosterButton");
+
+nextBtn.addEventListener("click", function(e) {
+	for (let i = 0; i < posters.length; ++i) {
+		let img = posters[i];
+		if (img.classList.contains("full-opacity")) {
+			if (i < posters.length - 1) {
+				img.classList.remove("full-opacity");
+				let nextImg = posters[i + 1];
+				nextImg.classList.add("full-opacity");
+				break;
+			}
+		}
+	}
+});
+
+prevBtn.addEventListener("click", function(e) {
+	for (let i = 0; i < posters.length; ++i) {
+		let img = posters[i];
+		if (img.classList.contains("full-opacity")) {
+			if (i > 0) {
+				img.classList.remove("full-opacity");
+				let nextImg = posters[i - 1];
+				nextImg.classList.add("full-opacity");
+				break;
+			}
+		}
+	}
+});
+
+</script>
+</body>
+</html>

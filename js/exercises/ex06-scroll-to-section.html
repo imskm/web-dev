@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Exercise 1</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.floating-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	background-color: #FFFFFF;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+	border-radius: 100%;
+	position: fixed;
+	bottom: 100px;
+	right: 100px;
+	cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<div>
+	<img
+		src="https://images.unsplash.com/photo-1655439923087-cc6aab2b9f75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+		style="display: block; width: 100vw; height: 100vh; object-fit: cover"
+	>
+</div>
+<div>
+	<img
+		src="https://images.unsplash.com/photo-1655365226285-2a36809b7693?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+		style="display: block; width: 100vw; height: 100vh; object-fit: cover"
+	>
+</div>
+<div>
+	<img
+		src="https://images.unsplash.com/photo-1655476682484-da8c7424fc2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+		style="display: block; width: 100vw; height: 100vh; object-fit: cover"
+	>
+</div>
+
+<div class="floating-button">&darr;</div>
+
+<script>
+const scroll = document.querySelector(".floating-button");
+
+let scrollAmount = 0;
+scroll.addEventListener("click", function() {
+	scrollAmount = scrollAmount + document.body.scrollHeight / 3;
+	window.scroll({
+		top: scrollAmount,
+		left: 0,
+		behavior: "smooth"
+	});
+});
+
+</script>
+</body>
+</html>

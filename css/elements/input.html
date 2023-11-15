@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<title>Button</title>
+<style>
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 100px;
+}
+
+.input {
+	/* Overrides / Resets */
+	display: inline-flex;
+	padding: 8px 12px;
+	border: 0;
+	background: none;
+	box-shadow: none;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: Inter, open-sans;
+	outline: 0;
+
+	/* Our own styles */
+	border: 2px solid #DEDEDE;
+	border-radius: 8px;
+	color: #333333;
+}
+
+.input:focus {
+	border: 2px solid #5268DF;
+}
+
+</style>
+</head>
+<body>
+
+<input class="input" type="text" placeholder="John Doe" />
+
+<input class="input" type="number" placeholder="John Doe" />
+
+<input class="input" type="email" placeholder="John Doe" />
+<input class="input" type="password" placeholder="John Doe" />
+
+</body>
+</html>

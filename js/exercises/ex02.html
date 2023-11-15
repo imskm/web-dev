@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Exercise 1</title>
+<style>
+.box {
+	display: inline-flex;
+	width: 100px;
+	height: 100px;
+}
+.box-black { background-color: black; }
+.box-white { background-color: white; }
+</style>
+</head>
+<body>
+
+<div id="checkboard" class="checkboard">
+</div>
+
+<hr>
+
+<button id="button">Generate Board</button>
+
+<script>
+let checkboard = document.getElementById("checkboard");
+const BOX_WIDTH  = 100;
+const BOX_HEIGHT = 100;
+document.getElementById("button").addEventListener("click", function() {
+	const n = parseInt(prompt("Enter n: "));
+	for (let i = 0; i < n; ++i) {
+		let row = document.createElement("div");
+		for (let j = 0; j < n; ++j) {
+			let box = document.createElement("div");
+			if ((i + j) % 2 === 0) {
+				box_class = "box-black";
+			} else {
+				box_class = "box-white";
+			}
+			box.classList.add("box");
+			box.classList.add(box_class);
+			row.appendChild(box);
+		}
+		checkboard.appendChild(row);
+	}
+});
+
+
+</script>
+</body>
+</html>

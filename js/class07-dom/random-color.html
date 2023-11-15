@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Document interesting properties</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	background-color: #F0F0F0;
+}
+
+.content {
+	margin: auto;
+	width: 400px;
+	border-radius: 8px;
+	box-shadow: 0px 12px 24px rgba(0, 0, 0, .15);
+}
+
+.content, .content-footer {
+	padding: 12px;
+}
+
+.image {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+button {
+	padding: 8px 32px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="div" class="content" style="height: 400px">
+</div>
+
+
+
+<script type="text/javascript">
+const div = document.querySelector("#div");
+
+div.addEventListener("click", () => {
+	let red = parseInt(Math.random() * 1000) % 256;
+	let green = parseInt(Math.random() * 1000) % 256;
+	let blue = parseInt(Math.random() * 1000) % 256;
+
+	div.style.background = `rgb(${red}, ${green}, ${blue})`;
+});
+
+
+</script>
+</body>
+</html>

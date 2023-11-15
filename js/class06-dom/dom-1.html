@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Control Statements</title>
+<style>
+* {
+	font-weight: 400;
+}
+
+.text-bold { font-weight: bold; }
+.text-red { color: red; }
+.text-lg { font-size: 60px; }
+.text-underline { text-decoration: underline; }
+
+</style>
+</head>
+<body>
+
+<h1 id="test" class="text-bold text-red text-lg">Hello from JavaScript</h1>
+
+<hr>
+
+<button id="add">Add Class</button>
+<button id="remove">Remove Class</button>
+<button id="toggle">Toggle Class</button>
+<button id="contains">Contains Class</button>
+
+
+<script>
+
+const el = document.getElementById("test");
+document.getElementById("add").addEventListener("click", function() {
+	el.classList.add("text-underline");
+});
+
+document.getElementById("remove").addEventListener("click", function() {
+	el.classList.remove("text-red");
+});
+
+document.getElementById("toggle").addEventListener("click", function() {
+	el.classList.toggle("text-bold");
+});
+
+document.getElementById("contains").addEventListener("click", function() {
+	console.log(el.classList.contains("text-bold"));
+});
+
+</script>
+</body>
+</html>

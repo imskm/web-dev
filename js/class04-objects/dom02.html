@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>JS DOM - 01</title>
+</head>
+<body>
+
+<h1 id="h1">ABC</h1>
+
+
+<script>
+let el = document.getElementById("h1");
+let h1 = document.createElement('h1');
+console.log(h1);
+
+h1.innerHTML = el.innerHTML;
+
+// Append h1 element in DOM (as child node in body)
+let body = document.getElementsByTagName('body')[0];
+body.appendChild(h1);
+
+// Adding span tag in h1
+// 1. Create span tag
+let span = document.createElement('span');
+span.innerHTML = ' HERO ';
+el.appendChild(span);
+
+setTimeout(myfunc, 2000);
+
+function myfunc()
+{
+	alert('ok');
+}
+
+</script>
+</body>
+</html>

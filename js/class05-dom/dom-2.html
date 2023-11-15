@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Control Statements</title>
+</head>
+<body id="body">
+
+<h1>Hello from JavaScript</h1>
+<hr>
+
+<button id="run">Add h2s</button>
+
+<hr>
+
+
+<script>
+
+const colors = ["Red", "Green", "Blue"];
+
+const button = document.getElementById("run");
+button.addEventListener("click", function() {
+
+	const body = document.getElementById("body");
+
+	let h2_one = document.createElement("h2");
+	h2_one.innerText = colors[0];
+	body.appendChild(h2_one);
+
+	let h2_two = document.createElement("h2");
+	h2_two.innerText = colors[1];
+	body.appendChild(h2_two);
+
+	let h2_three = document.createElement("h2");
+	h2_three.innerText = colors[2];
+	body.appendChild(h2_three);
+
+});
+
+</script>
+</body>
+</html>

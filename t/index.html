@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Tab</title>
+<style>
+.tabs {
+	display: flex;
+	gap: 32px;
+	border-bottom: 1px solid #888888;
+}
+
+
+.tab.active {
+	padding-bottom: 16px;
+	border-bottom: 1px solid #000000;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="tabs">
+	<div class="tab active">Tab 1</div>
+	<div class="tab">Tab 2</div>
+	<div class="tab">Tab 3</div>
+</div>
+
+<script>
+const tabs = document.querySelectorAll(".tab");
+let active = tabs[0];
+
+for (let i = 0; i < tabs.length; ++i) {
+	let t = tabs[i];
+
+	t.addEventListener("click", toggleActiveTab);
+}
+
+function toggleActiveTab(event) {
+	let current = event.target;
+	current.classList.add("active");
+	active.classList.remove("active");
+	active = current;
+}
+
+</script>
+
+</body>
+</html>

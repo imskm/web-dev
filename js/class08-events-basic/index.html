@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Exercise 1</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	background-color: #F0F0F0;
+}
+
+.content {
+	margin: auto;
+	width: 400px;
+	border-radius: 8px;
+	box-shadow: 0px 12px 24px rgba(0, 0, 0, .15);
+}
+
+.content {
+	padding: 12px;
+}
+
+.content-header {
+	margin-bottom: 16px;
+}
+
+.content-footer {
+	margin-top: 16px;
+}
+
+.image {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+button {
+	padding: 8px 32px;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+}
+ul {
+padding: 16px;
+}
+
+</style>
+</head>
+<body>
+
+<ul id="ul">
+	<li onclick="handleClick(event)">Item 1</li>
+	<li onclick="handleClick(event)">Item 2</li>
+	<li onclick="handleClick(event)">Item 3</li>
+	<li onclick="handleClick(event)">Item 4</li>
+	<li onclick="handleClick(event)">Item 5</li>
+	<li onclick="handleClick(event)">Item 6</li>
+	<li onclick="handleClick(event)">Item 7</li>
+</ul>
+
+<script>
+let ul = document.getElementById("ul");
+function handleClick(event) {
+	console.log(event);
+	console.log(event.target);
+	ul.removeChild(event.target);
+	// event.target.remove();
+}
+
+</script>
+
+
+
+</body>
+</html>

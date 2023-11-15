@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>Exercise 1</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	background-color: #F0F0F0;
+}
+
+.content {
+	margin: auto;
+	width: 400px;
+	border-radius: 8px;
+	box-shadow: 0px 12px 24px rgba(0, 0, 0, .15);
+}
+
+.content, .content-footer {
+	padding: 12px;
+}
+
+.image {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
+
+button {
+	padding: 8px 32px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="content">
+	<div class="content-header">
+		
+	</div>
+	<div class="content-body">
+		<div>
+			<img id="image" class="image" src="" />
+		</div>
+		<div id="name"></div>
+	</div>
+	<div class="content-footer">
+		<button id="prev">&larr;</button>
+		<button id="next">&rarr;</button>
+	</div>
+</div>
+
+<hr>
+
+<script>
+const data = [
+	{
+		name: "Shahrukh Khan",
+		image_url: "https://filmfare.wwmindia.com/content/2020/sep/shahrukhkhaninstagrampost41598962532.jpg",
+	},
+	{
+		name: "Salman Khan",
+		image_url: "https://st1.bollywoodlife.com/wp-content/uploads/2022/04/salman-khan-1.png",
+	},
+	{
+		name: "Robert Downy Jr.",
+		image_url: "https://media1.popsugar-assets.com/files/thumbor/HwtAUAufmAZv-FgGEIMJS2eQM-A/0x1:2771x2772/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2020/03/30/878/n/1922398/eb11f12e5e825104ca01c1.02079643_/i/Robert-Downey-Jr.jpg",
+	},
+	{
+		name: "Chris Hemsworth",
+		image_url: "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F08%2F12%2Fchris-hemsworth-1.jpg&q=60",
+	},
+	{
+		name: "Kristin Stewart",
+		image_url: "https://static.wikia.nocookie.net/twilightsaga/images/5/52/Kirsten_Stewart.jpg/revision/latest?cb=20150524125722",
+	},
+	{
+		name: "Khabib Nurmagomedov",
+		image_url: "https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Ffansided.com%2Ffiles%2F2020%2F10%2FMG_4269-850x560.jpg",
+	},
+	{
+		name: "Gennady Korotkevich",
+		image_url: "https://news.itmo.ru/images/news/big/p9635.jpg",
+	},
+];
+
+let active = 0;
+const name = document.getElementById("name");
+const image = document.getElementById("image");
+
+name.innerText = data[active].name;
+image.src = data[active].image_url;
+
+// Code for previous click
+document.getElementById("prev").addEventListener("click", function() {
+	if (active > 0) {
+		active--;
+	}
+	name.innerText = data[active].name;
+	image.src = data[active].image_url;
+});
+
+// Code for next click
+document.getElementById("next").addEventListener("click", function() {
+	if (active < data.length - 1) {
+		active++;
+	}
+	name.innerText = data[active].name;
+	image.src = data[active].image_url;
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.ext-box {
+	width: 200px;
+	height: 200px;
+	border-radius: 8px;
+	background-color: #CCCCCC;
+}
+
+.ext-red-box { background-color: red; }
+.ext-black-box { background-color: black; }
+
+
